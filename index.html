@@ -14,9 +14,16 @@
 </body>
     <script>
         var map = L.map('map');
-        map.setView([51.505, -0.09], 13);
+        map.setView([51.28940590271680, -113.97216796870], 9);
         var layer = L.tileLayer('http://tile.stamen.com/watercolor/{z}/{x}/{y}.jpg');
         layer.addTo(map);
+        
+        var data = omnivore.geojson('map.geojson').on('ready', function(){
+          data.eachlayer(function(layer){
+            layer.bindPopup(layer.feature.properties.name);
+          });
+        });
+        data.addTo(map);
     </script>
     
 </html>
