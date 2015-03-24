@@ -20,7 +20,7 @@
         layer.addTo(map);
         
         var data = omnivore.geojson('map.geojson').on('ready', function(){
-          data.eachlayer(function(layer){
+          data.eachLayer(function(layer){
             layer.bindPopup(layer.feature.properties.name);
           });
         });
