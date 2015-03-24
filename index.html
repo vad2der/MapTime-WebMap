@@ -1,0 +1,22 @@
+<!DOCUMENT>
+<html>
+<head>
+    <title> My Maptime</title>
+     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+    <style>#map { height: 100%; }</style>
+</head>
+
+<body>
+    <div id="map">
+    
+    </div>
+</body>
+    <script>
+        var map = L.map('map');
+        map.setView([51.505, -0.09], 13);
+        var layer = L.tileLayer('http://tile.stamen.com/watercolor/{z}/{x}/{y}.jpg');
+        layer.addTo(map);
+    </script>
+    
+</html>
